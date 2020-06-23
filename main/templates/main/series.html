@@ -1,0 +1,39 @@
+{% extends 'main/basic.html' %}
+
+{% block content %}
+<h1>hello</h1>
+    <div class="row" style="padding-bottom: 50px">
+        {% for ser in series|dictsort: "series_date" %}
+            <div class="col s12 m6 l4">
+                <a href="{{ser.series_slug}}", style="color:#000">
+                    <div class="card hoverable">
+                        <div class="card-content">
+                            <div class="card-title">{{ser.tutorial_series}}</div>
+                            <!--<p style="font-size:70%">Published {{tut.tutorial_published}}</p>-->
+                            <p>{{ser.series_summary}}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+    <footer class="page-footer font-small mdb-color lighten-3 pt-4" style="background-color: #333030; padding-bottom: 50px">
+
+  <!-- Footer Elements -->
+  
+
+    <!--Grid row-->
+    
+  <!-- Footer Elements -->
+<div class="container" style="text-align: center;">
+  <!-- Copyright -->
+  <a href="/event/" style="text-decoration: none; color: #F3ECEC">Events</a><br>
+  <a href="/data/" style="text-decoration: none; color: #F3ECEC">Project Gallery</a>
+
+</div>
+  
+  <!-- Copyright -->
+
+</footer>
+
+{% endblock %}
